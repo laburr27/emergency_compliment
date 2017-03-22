@@ -15,8 +15,9 @@ var color = require("./colors.js")
 // })
 
 app.get("/", (req,res) => {
-  res.render("index", {compliment: compliment()})
+  res.render("index", {color: color(), compliment: compliment()})
 })
+
 
 app.listen(4000, () => {
   console.log("listening on port 4000")
