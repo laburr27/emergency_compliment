@@ -10,10 +10,13 @@ app.use(bodyParser.urlencoded({extended: true}))
 var compliment = require("./compliments.js")
 var color = require("./colors.js")
 
-app.get("/", (req,res) => {
-  res.send(compliment())
-})
+// app.get("/", (req,res) => {
+//   res.send(compliment())
+// })
 
+app.get("/", (req,res) => {
+  res.render("index", {compliment: compliment()})
+})
 
 app.listen(4000, () => {
   console.log("listening on port 4000")
