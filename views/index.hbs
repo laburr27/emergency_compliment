@@ -3,6 +3,8 @@
 <main>
   <div>
     {{compliment}}
+    <br>
+    <button onclick="reload()">Get more sunshine!</button>
   </div>
 </main>
 
@@ -41,3 +43,9 @@ h1  {
   color: {{textcolor}};
 }
 </style>
+
+<script type="text/javascript">
+  function reload() {
+    location.reload();
+  }
+</script>
